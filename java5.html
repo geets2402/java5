@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    
+
+    <script>
+      // Array.Map
+      const employees = [
+        {
+          id: 101,
+          name: "Vikram",
+          department: "IT",
+          salary: 50000,
+          isPermanent: true,
+        },
+        {
+          id: 102,
+          name: "Anjali",
+          department: "HR",
+          salary: 45000,
+          isPermanent: false,
+        },
+        {
+          id: 103,
+          name: "Ravi",
+          department: "Finance",
+          salary: 60000,
+          isPermanent: true,
+        },
+        {
+          id: 104,
+          name: "Sneha",
+          department: "IT",
+          salary: 52000,
+          isPermanent: false,
+        },
+        {
+          id: 105,
+          name: "Aman",
+          department: "Marketing",
+          salary: 48000,
+          isPermanent: true,
+        },
+      ];
+
+      //array.map()
+      // map() – Get list of employee names:
+        const employeeNames = employees.map((employee) => employee.name);
+        console.log("Employee Names:", employeeNames); 
+
+        //array.filter()
+        // filter() – Get only IT department employees:
+        const itEmployees = employees.filter((employee) => employee.department === "IT");
+        console.log("IT Employees:", itEmployees);
+
+        //array.reduce()
+        // reduce() – Get total salary paid to all employees:
+        const totalSalary = employees.reduce((total, employee) => total + employee.salary, 0);
+        console.log("Total Salary:", totalSalary);
+
+    </script>
+  </body>
+</html>
